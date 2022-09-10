@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     post 'users', to: 'users#register'
 
     # user sign in
-    # post 'login', to: 'users#login'
+    post 'login', to: 'users#login'
   end
 end
