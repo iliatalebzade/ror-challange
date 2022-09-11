@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
     # questions routes
     post 'questions', to: 'questions#create'
+    put 'questions/:id', to: 'questions#update'
   end
 end
