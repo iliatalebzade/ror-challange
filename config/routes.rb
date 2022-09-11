@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     # questions routes
     post 'questions', to: 'questions#create'
     put 'questions/:id', to: 'questions#update'
+    delete 'questions/:id', to: 'questions#destroy'
   end
 end

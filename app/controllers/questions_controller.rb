@@ -17,6 +17,22 @@ class QuestionsController < ApplicationController
     end
   end
 
+
+  def destroy
+    # finding the selected question (selected via :id parameter in the URL)
+    target_question = Question.find_by(id: params[:id])
+
+    # checking if the current user is the owner of the target question 
+    if @current_user.id == target_question.user_id
+      # checking if deleting the target_question is possible with the given id and informing the client of the results
+      if target_question.destroy
+        render json: { message: 'OK'}
+      else
+        render json: { message: 'NOT_OK', error: target_question.errors }
+      end
+    end
+  end
+
   def create
     # reciving the given and filtered data
     recived_data = create_question_params
