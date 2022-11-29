@@ -1,2 +1,2 @@
 # ror-challange-one
-The first challenge to pass in order to qualify for the job
+Just a dummy assignment to see how efficient I am with rails
